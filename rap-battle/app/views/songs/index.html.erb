@@ -10,4 +10,5 @@
   <%= @song.primary_artist.name %>
   <%= image_tag(@song.primary_artist.image_url, :alt => @song.primary_artist.name) %>
   <%= @song.title %>
+  <%= @lyrics.html_safe %>
 <% end %>
