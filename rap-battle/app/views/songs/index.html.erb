@@ -4,6 +4,14 @@
   <%= submit_tag("Search") %>
 <% end %>
 
+<button class="reset">RESET LYRICS</button>
+
+<div class="lyric1">
+</div>
+
+<div class="lyric2">
+</div>
+
 <% if @song %>
   <h1><%= @song.title %></h1>
   <p><%= @song.primary_artist.name %></p>
