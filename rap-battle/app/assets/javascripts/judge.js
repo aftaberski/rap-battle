@@ -1,0 +1,1 @@
+var SWEAR_WORDS = ['shit', 'fuck', 'bitch'];
