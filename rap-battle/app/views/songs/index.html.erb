@@ -1,22 +1,43 @@
+<% if @song%>
+<div class="small-search">
 <%= form_tag("/", method: "get") do %>
   <%= label_tag("Search for:") %>
   <%= text_field_tag(:q) %>
   <%= submit_tag("Search") %>
 <% end %>
+  <button class="reset">RESET LYRICS</button>
 
-<button class="reset">RESET LYRICS</button>
+  <button class="get-score">Battle!</button>
+  <div class="winner"></div>
+  <div class="lyric1"></div>
 
-<button class="get-score">GET LYRIC 1 SCORE</button>
-<div class="winner"></div>
-<div class="lyric1">
+<div class="lyric2"></div>
 </div>
+<% else %>
+<div class="wrapper" >
 
-<div class="lyric2">
+  <h1 class="site-title">RAP BATTLE</h1>
+  <div class="large-search">
+  <%= form_tag("/", method: "get") do %>
+    <%= label_tag("Search for:") %>
+    <%= text_field_tag(:q) %>
+    <%= submit_tag("Search") %>
+  <% end %>
+    <button class="reset">RESET LYRICS</button>
+
+    <button class="get-score">Battle!</button>
+    <div class="winner"></div>
+    <div class="lyric1"></div>
+
+  <div class="lyric2"></div>
+  </div>
+  <% end %>
 </div>
-
 <% if @song %>
-  <h1 class="song-title"><%= @song.title %></h1>
-  <p class="artist"><%= @song.primary_artist.name %></p>
-  <%= image_tag(@song.primary_artist.image_url, :alt => @song.primary_artist.name) %>
-  <%= @lyrics.html_safe %>
+  <div class="song-info">
+    <h1 class="song-title"><%= @song.title %></h1>
+    <p class="artist"><%= @song.primary_artist.name %></p>
+    <%= image_tag(@song.primary_artist.image_url, :alt => @song.primary_artist.name) %>
+    <%= @lyrics.html_safe %>
+  </div>
 <% end %>

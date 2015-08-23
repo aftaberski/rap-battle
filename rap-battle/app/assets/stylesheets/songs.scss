@@ -1,3 +1,78 @@
 // Place all the styles related to the Songs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+$col-light-green: #D3FF9E;
+$col-orange: #E89815;
+$col-red: #FF5C3D;
+$col-dark-blue: #22004C;
+$col-light-blue: #98FFE0;
+$col-pink: #FF27EA;
+
+/*.large-search {
+  height: 100%;
+  width: 100%;
+  transform: translateY(50%);
+}*/
+
+body, html {
+    height:100%;
+    margin:0;
+}
+
+.wrapper {
+  height: 100vh;
+  background-image: url("/assets/rap-battle.jpg");
+  margin: 0;
+  background-size: cover;
+  padding-top: 30vh;
+}
+
+.large-search {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: black;
+  margin:0 25%;
+  width:50%;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  padding: 20px 25px;
+}
+
+.small-search {
+  background:white;
+  margin:0 30%;
+  width:40%;
+  text-align: center;
+}
+
+.song-info {
+  width: 80%;
+  margin: 0 10%;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Lato', sans-serif;
+  font-size: 56px;
+  font-weight: 700;
+}
+.site-title {
+  margin: 0 auto 5vh auto;
+  text-align: center;
+  font-size: 66px;
+  color: $col-pink;
+  border: $col-pink solid 2px;
+  display: table;
+  padding: 10px 20px;
+}

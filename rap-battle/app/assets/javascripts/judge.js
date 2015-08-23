@@ -1,1 +1,1 @@
-var SWEAR_WORDS = ['shit', 'fuck', 'bitch', 'motherfucker'];
+var SWEAR_WORDS = ["shit", "fuck", "bitch", "motherfucker", "motherfuckin'"];

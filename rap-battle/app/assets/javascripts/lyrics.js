@@ -64,7 +64,7 @@ $(document).ready(function (){
         title: $('.song-title').text()
       });
        lyric1 = "<p>" + store.get('lyric1').lyric + "</p>";
-       $('.lyric1').append(lyric1);
+       // $('.lyric1').append(lyric1);
    })
  }
 
