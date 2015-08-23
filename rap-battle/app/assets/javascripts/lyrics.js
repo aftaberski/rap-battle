@@ -15,9 +15,9 @@ function compareLyrics(lyric1Array, lyric2Array){
     lyric2Score = getScore(lyric2Array);
     var lyric1 = store.get('lyric1');
     var lyric2 = store.get('lyric2');
-    if (lyric1Score > lyric2Array){
+    if (lyric1Score > lyric2Score){
         $('.winner').empty().append(lyric1.artist + " won!");
-    } else if (lyric1Score == lyric2Array){
+    } else if (lyric1Score == lyric2Score){
         $('.winner').empty().append(lyric1.artist +" and " + lyric2.artist + "tied!");
     } else {
         $('.winner').empty().append(lyric2.artist +  " won!");
@@ -33,6 +33,7 @@ function getScore(lyric){
             score++;
         }
     }
+    // console.log(lyric, score);
     return score;
 }
 
