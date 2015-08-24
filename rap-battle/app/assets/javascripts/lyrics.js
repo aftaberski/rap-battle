@@ -45,6 +45,7 @@ $(document).ready(function (){
   if (lyric1 && lyric2) {
     $('.lyric1').append(store.get('lyric1').lyric);
     $('.lyric2').append(store.get('lyric2').lyric);
+    console.log("Both are here!")
   } else if ( lyric1 ) {
     $('.lyric1').append(store.get('lyric1').lyric);
       $('div,pre').mouseup(function (e){
@@ -58,7 +59,8 @@ $(document).ready(function (){
            $('.lyric2').append(lyric2);
          }
         });
-  } else {
+  } else if (!lyric1 && !lyric2) {
+    var count = 0;
    $('div,pre').mouseup(function (e){
     if (getSelectionText() !== ""){
       store.set('lyric1', {
@@ -68,6 +70,8 @@ $(document).ready(function (){
       });
       lyric1 = "<p>" + store.get('lyric1').lyric + "</p>";
       $('.lyric1').append(lyric1);
+      count++;
+      console.log(count);
     }
    })
  }
