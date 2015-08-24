@@ -48,23 +48,27 @@ $(document).ready(function (){
   } else if ( lyric1 ) {
     $('.lyric1').append(store.get('lyric1').lyric);
       $('div,pre').mouseup(function (e){
-         store.set('lyric2', {
-          lyric: getSelectionText(),
-          artist: $('.artist').text(),
-          title: $('.song-title').text()
+        if (getSelectionText() !== ""){
+           store.set('lyric2', {
+            lyric: getSelectionText(),
+            artist: $('.artist').text(),
+            title: $('.song-title').text()
+          });
+           lyric2 = "<p>" + store.get('lyric2').lyric + "</p>";
+           $('.lyric2').append(lyric2);
+         }
         });
-         lyric2 = "<p>" + store.get('lyric2').lyric + "</p>";
-         $('.lyric2').append(lyric2);
-       })
   } else {
    $('div,pre').mouseup(function (e){
+    if (getSelectionText() !== ""){
       store.set('lyric1', {
         lyric: getSelectionText(),
         artist: $('.artist').text(),
         title: $('.song-title').text()
       });
-       lyric1 = "<p>" + store.get('lyric1').lyric + "</p>";
-       // $('.lyric1').append(lyric1);
+      lyric1 = "<p>" + store.get('lyric1').lyric + "</p>";
+      $('.lyric1').append(lyric1);
+    }
    })
  }
 
