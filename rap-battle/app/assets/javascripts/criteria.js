@@ -1,0 +1,1 @@
+SWEAR_WORDS = ["shit", "fuck", "bitch", "motherfucker", "motherfuckin'", "ass"];
