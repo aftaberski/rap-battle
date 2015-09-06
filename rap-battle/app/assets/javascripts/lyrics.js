@@ -16,11 +16,14 @@ function compareLyrics(lyric1Array, lyric2Array){
     var lyric1 = store.get('lyric1');
     var lyric2 = store.get('lyric2');
     if (lyric1Score > lyric2Score){
-        $('.winner').empty().append(lyric1.artist + " won!");
+        modal.open({content: lyric1.artist + " won!"});
+        // $('.winner').empty().append(lyric1.artist + " won!");
     } else if (lyric1Score == lyric2Score){
-        $('.winner').empty().append(lyric1.artist +" and " + lyric2.artist + "tied!");
+        modal.open({content: lyric1.artist +" and " + lyric2.artist + " tied!"});
+        // $('.winner').empty().append(lyric1.artist +" and " + lyric2.artist + "tied!");
     } else {
-        $('.winner').empty().append(lyric2.artist +  " won!");
+        modal.open({content: lyric2.artist +  " won!"});
+        // $('.winner').empty().append(lyric2.artist +  " won!");
     }
 }
 
